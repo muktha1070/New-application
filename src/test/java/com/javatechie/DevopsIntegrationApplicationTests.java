@@ -6,8 +6,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class DevopsIntegrationApplicationTests {
 
-	@Test
-	void contextLoads() {
+	@GetMapping
+	public String message(){
+		return "Hello world";
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(DevopsIntegrationApplication.class, args);
 	}
 
 }
